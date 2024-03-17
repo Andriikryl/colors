@@ -1,0 +1,29 @@
+.gui {
+    max-width: max-content;
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    color: var(--gui-txt-clr, hsl(0, 0%, 0%));
+    background-color: var(--gui-bg-clr, hsl(210, 25%, 97%));
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px hsl(0 0% 0% / 10%);
+
+    & label {
+      display: grid;
+      gap: 2rem;
+      align-items: center;
+      justify-items: start;
+      font-weight: 700;
+
+      &:not(:last-child) {
+        padding-block-end: 1rem;
+      }
+
+      & input:not([type="checkbox"]) {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }

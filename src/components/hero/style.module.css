@@ -8,3 +8,8 @@
     padding-inline: 20px;
 }
 
+.flex__group{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
