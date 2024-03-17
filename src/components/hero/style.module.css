@@ -1,5 +1,6 @@
 .hero{
     height: 100dvh;
+    padding-block: 20px;
 }
 .container{
     max-inline-size: 1300px;
