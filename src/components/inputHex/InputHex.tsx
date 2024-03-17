@@ -1,4 +1,4 @@
-import { createSignal } from "solid-js";
+import { createEffect, createSignal } from "solid-js";
 import { curentCuler, setCurentCuler } from "../../store/store";
 import clsx from "clsx";
 import styles from "./style.module.css";
@@ -22,7 +22,9 @@ function validateHexColor(input: InputElement) {
 export default function InputHex() {
   const [value, setValue] = createSignal(curentCuler.color);
   const [error, setError] = createSignal(false);
-
+  createEffect(() => {
+    setValue(curentCuler.color);
+  });
   return (
     <div class={styles.inputHex__box}>
       <form
