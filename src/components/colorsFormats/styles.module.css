@@ -1,0 +1,33 @@
+.rgbColor__container{
+    width: 100%;
+    padding-block: 20px;
+    border-bottom: 2px solid  var(--bg-2);
+    margin-block-end: 20px;
+
+}
+
+.rgb__values{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(	--bg-1);
+    font-family: Patrick Hand;
+    font-size: clamp(20px, 5vw + 1rem, 40px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+}
+
+.color__space{
+    font-size: clamp(20px, 5vw + 1rem, 20px);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.colors__values{
+    color: #ffff;
+    mix-blend-mode: difference;
+}

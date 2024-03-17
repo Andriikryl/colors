@@ -1,0 +1,42 @@
+
+.palette__wrapper{
+    --layout-grid-min: 30ch;
+    --layout-grid-gap: 0vw;
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(100%, var(--layout-grid-min)), 1fr)
+    );
+    gap: var(--layout-grid-gap);
+}
+
+.palette__title{
+  padding-block: 20px;
+  text-align: center;
+  color: var(--black, #1b1b1b);
+  font-family: Patrick Hand;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #1b1b1b;
+}
+
+.curent__palette{
+  padding: 10px;
+  height: 100px;
+  & span{
+    display: block;
+    color: #ffff;
+    font-family: Patrick Hand;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    mix-blend-mode: difference;
+  }
+}
