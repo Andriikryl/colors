@@ -2,6 +2,7 @@ import { createEffect, createSignal } from "solid-js";
 import { curentCuler, setCurentCuler } from "../../store/store";
 import clsx from "clsx";
 import styles from "./style.module.css";
+import { getOppositeColor } from "../../utils/getOppositeColor";
 interface InputElement {
   element: HTMLInputElement;
 }
@@ -22,8 +23,10 @@ function validateHexColor(input: InputElement) {
 export default function InputHex() {
   const [value, setValue] = createSignal(curentCuler.color);
   const [error, setError] = createSignal(false);
+  const [opositeColor, setOpositColor] = createSignal(curentCuler.color);
   createEffect(() => {
     setValue(curentCuler.color);
+    setOpositColor(getOppositeColor(curentCuler.color));
   });
   return (
     <div class={styles.inputHex__box}>
@@ -38,6 +41,7 @@ export default function InputHex() {
           class={clsx(styles.input, {
             [styles.input__erro]: error() === true,
           })}
+          style={{ color: opositeColor() }}
           value={value()}
           onInput={(event) => {
             const newColor = event.target.value;
