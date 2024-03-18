@@ -3,6 +3,7 @@ import { For } from "solid-js";
 import Values from "values.js";
 import { curentCuler } from "../../store/store";
 import styles from "./style.module.css";
+import CopyToclipboard from "../copyToclipboardBtn/CopyToclipboard";
 
 export default function Palettes() {
   const [paletteColors, setPaletteColors] = createSignal<Values[]>([]);
@@ -24,8 +25,11 @@ export default function Palettes() {
               style={{ "background-color": color.hexString() }}
               class={styles.curent__palette}
             >
+              <div>
               <span>{color.hexString()}</span>
               <span>{color.weight} %</span>
+              </div>
+              <CopyToclipboard text={color.hexString()} />
             </div>
           )}
         </For>

@@ -27,6 +27,9 @@
 .curent__palette{
   padding: 10px;
   height: 100px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
   & span{
     display: block;
     color: #ffff;
