@@ -12,7 +12,7 @@
     gap: 10px;
     color: var(	--bg-1);
     font-family: Patrick Hand;
-    font-size: clamp(20px, 5vw + 1rem, 40px);
+    font-size: clamp(20px, 3vw + 1rem, 40px);
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
@@ -21,7 +21,7 @@
 }
 
 .color__space{
-    font-size: clamp(20px, 5vw + 1rem, 20px);
+    font-size: clamp(20px, 2vw + 1rem, 20px);
     padding: 5px;
     border-radius: 5px;
     background-color: #ffffff;

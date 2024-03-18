@@ -26,10 +26,12 @@ export default function Palettes() {
               class={styles.curent__palette}
             >
               <div>
-              <span>{color.hexString()}</span>
-              <span>{color.weight} %</span>
+                <span>{color.hexString()}</span>
+                <span>{color.weight} %</span>
               </div>
-              <CopyToclipboard text={color.hexString()} />
+              <div class={styles.btn__box}>
+                <CopyToclipboard text={color.hexString()} />
+              </div>
             </div>
           )}
         </For>

@@ -27,9 +27,7 @@
 .curent__palette{
   padding: 10px;
   height: 100px;
-  display: flex;
-  justify-content: space-between;
-  max-width: 300px;
+  position: relative;
   & span{
     display: block;
     color: #ffff;
@@ -41,5 +39,10 @@
     letter-spacing: 0.28px;
     text-transform: uppercase;
     mix-blend-mode: difference;
+  }
+  .btn__box{
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
